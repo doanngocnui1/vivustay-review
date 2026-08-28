@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VivuStay - Phần Mềm Quản Lý Nhà Trọ Thông Minh</title>
+    <meta name="description" content="VivuStay - Ứng dụng quản lý phòng trọ, nhà trọ toàn diện trên Android. Quản lý tòa nhà, phòng, khách thuê, hợp đồng, cọc, thu chi, điện nước, hoá đơn, sao lưu Google Drive và nhiều hơn nữa.">
+    <meta name="keywords" content="quản lý nhà trọ, quản lý phòng trọ, phần mềm quản lý trọ, app quản lý trọ, VivuStay">
+    <meta name="author" content="VivuStay">
+    <meta property="og:title" content="VivuStay - Phần Mềm Quản Lý Nhà Trọ Thông Minh">
+    <meta property="og:description" content="Giải pháp quản lý nhà trọ, phòng trọ toàn diện trên điện thoại Android.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#" class="nav-logo">
+            <span class="logo-icon">🏠</span>
+            <span class="logo-text">Vivu<span class="logo-accent">Stay</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#features">Tính năng</a></li>
+            <li><a href="#details">Chi tiết</a></li>
+            <li><a href="#workflow">Quy trình</a></li>
+            <li><a href="#testimonials">Đánh giá</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#download" class="nav-cta">Tải ứng dụng</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Phiên bản 2.0 — Miễn phí hoàn toàn
+            </div>
+            <h1 class="hero-title">
+                Quản lý nhà trọ<br>
+                <span class="gradient-text">thông minh</span> trên<br>
+                điện thoại
+            </h1>
+            <p class="hero-description">
+                Giải pháp toàn diện giúp chủ trọ quản lý tòa nhà, phòng, khách thuê, hợp đồng, thu chi, hoá đơn điện nước — tất cả chỉ trong một ứng dụng duy nhất.
+            </p>
+            <div class="hero-actions">
+                <a href="#download" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Tải APK ngay
+                </a>
+                <a href="#features" class="btn btn-outline">
+                    Khám phá tính năng →
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Tính năng</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Miễn phí</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="0">0</span><span class="stat-suffix">đ</span>
+                    <span class="stat-label">Quảng cáo</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="screen-header">
+                            <span class="screen-greeting">Xin chào, Chủ trọ 👋</span>
+                            <span class="screen-date">28/08/2026</span>
+                        </div>
+                        <div class="screen-stats-grid">
+                            <div class="screen-stat-card stat-blue">
+                                <span class="screen-stat-icon">🏢</span>
+                                <span class="screen-stat-value">3</span>
+                                <span class="screen-stat-label">Tòa nhà</span>
+                            </div>
+                            <div class="screen-stat-card stat-green">
+                                <span class="screen-stat-icon">🚪</span>
+                                <span class="screen-stat-value">45</span>
+                                <span class="screen-stat-label">Phòng</span>
+                            </div>
+                            <div class="screen-stat-card stat-orange">
+                                <span class="screen-stat-icon">👤</span>
+                                <span class="screen-stat-value">38</span>
+                                <span class="screen-stat-label">Khách thuê</span>
+                            </div>
+                            <div class="screen-stat-card stat-red">
+                                <span class="screen-stat-icon">⚠️</span>
+                                <span class="screen-stat-value">2</span>
+                                <span class="screen-stat-label">Sắp hết hạn</span>
+                            </div>
+                        </div>
+                        <div class="screen-chart-placeholder">
+                            <div class="mini-bar" style="height:60%"></div>
+                            <div class="mini-bar" style="height:85%"></div>
+                            <div class="mini-bar" style="height:45%"></div>
+                            <div class="mini-bar" style="height:90%"></div>
+                            <div class="mini-bar" style="height:70%"></div>
+                            <div class="mini-bar" style="height:55%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-card card-1">
+                <span class="fc-icon">💰</span>
+                <div class="fc-info">
+                    <span class="fc-title">Doanh thu tháng 8</span>
+                    <span class="fc-value">45.200.000đ</span>
+                </div>
+            </div>
+            <div class="floating-card card-2">
+                <span class="fc-icon">✅</span>
+                <div class="fc-info">
+                    <span class="fc-title">Đã thu tiền</span>
+                    <span class="fc-value">38/45 phòng</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FEATURES OVERVIEW ===================== -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Tính năng nổi bật</span>
+            <h2 class="section-title">Mọi thứ bạn cần để<br><span class="gradient-text">quản lý nhà trọ hiệu quả</span></h2>
+            <p class="section-desc">Từ quản lý phòng đến sao lưu đám mây — VivuStay tích hợp tất cả trong một ứng dụng duy nhất, giúp bạn tiết kiệm thời gian và tối ưu doanh thu.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up">
+                <div class="feature-icon icon-blue">🏢</div>
+                <h3>Quản lý Tòa nhà & Phòng</h3>
+                <p>Tạo không giới hạn tòa nhà và phòng. Theo dõi trạng thái phòng trống, đang thuê, sắp hết hạn với giao diện trực quan.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon icon-green">👤</div>
+                <h3>Quản lý Khách thuê</h3>
+                <p>Lưu trữ đầy đủ thông tin khách: họ tên, CCCD, số điện thoại, quê quán, nghề nghiệp. Chụp ảnh CCCD 2 mặt ngay trên app.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon icon-orange">📄</div>
+                <h3>Hợp đồng & Tiền cọc</h3>
+                <p>Tạo hợp đồng thuê, quản lý tiền cọc, theo dõi ngày bắt đầu - kết thúc, tự động cảnh báo sắp hết hạn hợp đồng.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon icon-purple">⚡</div>
+                <h3>Ghi Điện Nước tự động</h3>
+                <p>Ghi số điện nước hàng tháng, chụp ảnh đồng hồ, tự động tính tiền theo đơn giá bậc thang hoặc giá cố định.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-icon icon-red">💰</div>
+                <h3>Thu Chi & Tài chính</h3>
+                <p>Theo dõi toàn bộ thu chi, công nợ, doanh thu từng tháng. Biểu đồ trực quan giúp nắm rõ tình hình tài chính.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-icon icon-teal">🧾</div>
+                <h3>Hoá đơn & Xuất PDF</h3>
+                <p>Tự động tạo hoá đơn tiền phòng chi tiết, xuất PDF chuyên nghiệp để gửi cho khách thuê hoặc in ra giấy.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="feature-icon icon-blue">☁️</div>
+                <h3>Sao lưu Google Drive</h3>
+                <p>Đồng bộ toàn bộ dữ liệu và hình ảnh lên Google Drive. Sao lưu thông minh, chống trùng lặp, tiết kiệm dung lượng.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="feature-icon icon-green">📊</div>
+                <h3>Nhập liệu Excel</h3>
+                <p>Tải file mẫu Excel, nhập liệu hàng loạt tòa nhà, phòng, khách thuê, chi phí — tiết kiệm thời gian nhập dữ liệu.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="feature-icon icon-orange">💬</div>
+                <h3>Gửi tin Zalo tự động</h3>
+                <p>Tự động gửi tin nhắn nhắc tiền phòng, hoá đơn điện nước cho khách thuê qua Zalo với nội dung tuỳ chỉnh.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== DETAIL SECTIONS ===================== -->
+<section class="details" id="details">
+    <div class="container">
+
+        <!-- Detail 1: Tòa nhà & Phòng -->
+        <div class="detail-block">
+            <div class="detail-visual">
+                <div class="detail-phone">
+                    <div class="dp-screen">
+                        <div class="dp-header-bar">
+                            <span>🏢 Danh Sách Tòa Nhà</span>
+                        </div>
+                        <div class="dp-room-list">
+                            <div class="dp-room-item">
+                                <div class="dp-room-badge occupied">Đang thuê</div>
+                                <span class="dp-room-name">Phòng 101</span>
+                                <span class="dp-room-price">3.500.000đ</span>
+                            </div>
+                            <div class="dp-room-item">
+                                <div class="dp-room-badge empty">Trống</div>
+                                <span class="dp-room-name">Phòng 102</span>
+                                <span class="dp-room-price">3.200.000đ</span>
+                            </div>
+                            <div class="dp-room-item">
+                                <div class="dp-room-badge occupied">Đang thuê</div>
+                                <span class="dp-room-name">Phòng 103</span>
+                                <span class="dp-room-price">4.000.000đ</span>
+                            </div>
+                            <div class="dp-room-item">
+                                <div class="dp-room-badge warning">Sắp hết HĐ</div>
+                                <span class="dp-room-name">Phòng 201</span>
+                                <span class="dp-room-price">3.800.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content">
+                <span class="detail-tag">Quản lý Tòa nhà & Phòng</span>
+                <h3>Quản lý trực quan,<br>không giới hạn số lượng</h3>
+                <p>Tạo và quản lý nhiều tòa nhà cùng lúc. Mỗi tòa nhà chứa không giới hạn phòng với đầy đủ thông tin: tên phòng, giá thuê, diện tích, tầng, số lượng người tối đa.</p>
+                <ul class="detail-list">
+                    <li>
+                        <span class="check-icon">✓</span>
+                        Trạng thái phòng: Trống / Đang thuê / Sắp hết hạn
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        Cấu hình chi phí riêng cho từng tòa nhà (Điện, Nước, Xe, Dịch vụ)
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        Thêm chi phí tuỳ chỉnh không giới hạn
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        Biểu đồ tổng quan tỷ lệ phòng trống / đang thuê
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detail 2: Khách thuê -->
+        <div class="detail-block reverse">
+            <div class="detail-visual">
+                <div class="detail-phone">
+                    <div class="dp-screen">
+                        <div class="dp-header-bar dp-green">
+                            <span>👤 Thông Tin Khách Thuê</span>
+                        </div>
+                        <div class="dp-tenant-card">
+                            <div class="dp-avatar">NV</div>
+                            <div class="dp-tenant-info">
+                                <span class="dp-tenant-name">Nguyễn Văn A</span>
+                                <span class="dp-tenant-phone">📱 0901 234 567</span>
+                            </div>
+                        </div>
+                        <div class="dp-info-rows">
+                            <div class="dp-info-row">
+                                <span class="dp-info-label">CCCD</span>
+                                <span class="dp-info-value">0123456789012</span>
+                            </div>
+                            <div class="dp-info-row">
+                                <span class="dp-info-label">Quê quán</span>
+                                <span class="dp-info-value">Hà Nội</span>
+                            </div>
+                            <div class="dp-info-row">
+                                <span class="dp-info-label">Nghề nghiệp</span>
+                                <span class="dp-info-value">Nhân viên văn phòng</span>
+                            </div>
+                            <div class="dp-info-row">
+                                <span class="dp-info-label">Ngày vào</span>
+                                <span class="dp-info-value">01/08/2026</span>
+                            </div>
+                        </div>
+                        <div class="dp-cccd-photos">
+                            <div class="dp-cccd">📷 CCCD mặt trước</div>
+                            <div class="dp-cccd">📷 CCCD mặt sau</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content">
+                <span class="detail-tag tag-green">Quản lý Khách thuê</span>
+                <h3>Hồ sơ khách thuê<br>chi tiết & an toàn</h3>
+                <p>Lưu trữ toàn bộ thông tin cá nhân của khách thuê trong một giao diện duy nhất. Chụp và lưu ảnh giấy tờ tùy thân trực tiếp từ camera điện thoại.</p>
+                <ul class="detail-list">
+                    <li>
+                        <span class="check-icon green">✓</span>
+                        Họ tên, số điện thoại, CCCD, quê quán, nghề nghiệp
+                    </li>
+                    <li>
+                        <span class="check-icon green">✓</span>
+                        Chụp ảnh CCCD 2 mặt, ảnh hợp đồng, biên lai
+                    </li>
+                    <li>
+                        <span class="check-icon green">✓</span>
+                        Theo dõi lịch sử khách thuê theo từng phòng
+                    </li>
+                    <li>
+                        <span class="check-icon green">✓</span>
+                        Tìm kiếm khách nhanh theo tên hoặc số điện thoại
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detail 3: Hợp đồng & Cọc -->
+        <div class="detail-block">
+            <div class="detail-visual">
+                <div class="detail-phone">
+                    <div class="dp-screen">
+                        <div class="dp-header-bar dp-orange">
+                            <span>📄 Quản Lý Hợp Đồng</span>
+                        </div>
+                        <div class="dp-contract-card">
+                            <div class="dp-contract-header">
+                                <span class="dp-contract-room">Phòng 101 — Tòa A</span>
+                                <span class="dp-contract-status active">Đang hiệu lực</span>
+                            </div>
+                            <div class="dp-contract-detail">
+                                <div class="dp-cd-row">
+                                    <span>📅 Bắt đầu</span>
+                                    <span>01/06/2026</span>
+                                </div>
+                                <div class="dp-cd-row">
+                                    <span>📅 Kết thúc</span>
+                                    <span>01/06/2027</span>
+                                </div>
+                                <div class="dp-cd-row">
+                                    <span>💰 Tiền cọc</span>
+                                    <span>3.500.000đ</span>
+                                </div>
+                                <div class="dp-cd-row">
+                                    <span>💵 Giá thuê</span>
+                                    <span>3.500.000đ/tháng</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dp-contract-images">
+                            <div class="dp-ci">📸 Trang 1</div>
+                            <div class="dp-ci">📸 Trang 2</div>
+                            <div class="dp-ci">📸 Trang 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content">
+                <span class="detail-tag tag-orange">Hợp đồng & Tiền cọc</span>
+                <h3>Hợp đồng rõ ràng,<br>tiền cọc minh bạch</h3>
+                <p>Quản lý hợp đồng thuê phòng với đầy đủ chi tiết: thời hạn, giá thuê, tiền cọc, điều khoản. Chụp ảnh hợp đồng giấy để lưu trữ kỹ thuật số.</p>
+                <ul class="detail-list">
+                    <li>
+                        <span class="check-icon orange">✓</span>
+                        Tạo hợp đồng cho từng phòng với thời hạn linh hoạt
+                    </li>
+                    <li>
+                        <span class="check-icon orange">✓</span>
+                        Quản lý tiền cọc: đặt cọc / hoàn cọc / khấu trừ
+                    </li>
+                    <li>
+                        <span class="check-icon orange">✓</span>
+                        Cảnh báo tự động khi hợp đồng sắp hết hạn (30 ngày)
+                    </li>
+                    <li>
+                        <span class="check-icon orange">✓</span>
+                        Chụp & lưu ảnh hợp đồng nhiều trang
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detail 4: Điện nước -->
+        <div class="detail-block reverse">
+            <div class="detail-visual">
+                <div class="detail-phone">
+                    <div class="dp-screen">
+                        <div class="dp-header-bar dp-purple">
+                            <span>⚡ Ghi Điện Nước Tháng 8</span>
+                        </div>
+                        <div class="dp-utility-list">
+                            <div class="dp-utility-item">
+                                <div class="dp-utility-room">P.101</div>
+                                <div class="dp-utility-data">
+                                    <div class="dp-ud-row">
+                                        <span>⚡ Điện:</span>
+                                        <span>145 → 278 = <strong>133 kWh</strong></span>
+                                    </div>
+                                    <div class="dp-ud-row">
+                                        <span>💧 Nước:</span>
+                                        <span>3 người × 100.000</span>
+                                    </div>
+                                </div>
+                                <div class="dp-utility-total">799.000đ</div>
+                            </div>
+                            <div class="dp-utility-item">
+                                <div class="dp-utility-room">P.102</div>
+                                <div class="dp-utility-data">
+                                    <div class="dp-ud-row">
+                                        <span>⚡ Điện:</span>
+                                        <span>200 → 312 = <strong>112 kWh</strong></span>
+                                    </div>
+                                    <div class="dp-ud-row">
+                                        <span>💧 Nước:</span>
+                                        <span>2 người × 100.000</span>
+                                    </div>
+                                </div>
+                                <div class="dp-utility-total">636.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content">
+                <span class="detail-tag tag-purple">Điện nước & Chi phí</span>
+                <h3>Ghi chỉ số, tính tiền<br>tự động chính xác</h3>
+                <p>Hệ thống ghi chỉ số điện nước hàng tháng, tự động tính tiền dựa trên đơn giá đã cấu hình. Hỗ trợ chụp ảnh đồng hồ làm bằng chứng.</p>
+                <ul class="detail-list">
+                    <li>
+                        <span class="check-icon purple">✓</span>
+                        5 loại chi phí mặc định: Điện sinh hoạt, Điện tiện ích, Nước, Xe, Dịch vụ
+                    </li>
+                    <li>
+                        <span class="check-icon purple">✓</span>
+                        Đơn vị linh hoạt: Theo số điện, Theo khối nước, Theo người, Theo xe, Theo phòng
+                    </li>
+                    <li>
+                        <span class="check-icon purple">✓</span>
+                        Tự thêm chi phí tuỳ chỉnh (Internet, Rác, Thang máy…)
+                    </li>
+                    <li>
+                        <span class="check-icon purple">✓</span>
+                        Chụp ảnh đồng hồ điện/nước minh bạch
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detail 5: Thu chi & Tài chính -->
+        <div class="detail-block">
+            <div class="detail-visual">
+                <div class="detail-phone">
+                    <div class="dp-screen">
+                        <div class="dp-header-bar dp-red">
+                            <span>💰 Thu Chi Tháng 8/2026</span>
+                        </div>
+                        <div class="dp-finance-summary">
+                            <div class="dp-fin-card fin-income">
+                                <span class="dp-fin-label">Thu</span>
+                                <span class="dp-fin-amount">+45.200.000đ</span>
+                            </div>
+                            <div class="dp-fin-card fin-expense">
+                                <span class="dp-fin-label">Chi</span>
+                                <span class="dp-fin-amount">-8.500.000đ</span>
+                            </div>
+                            <div class="dp-fin-card fin-profit">
+                                <span class="dp-fin-label">Lợi nhuận</span>
+                                <span class="dp-fin-amount">+36.700.000đ</span>
+                            </div>
+                        </div>
+                        <div class="dp-chart-bars">
+                            <div class="dp-month-bar">
+                                <div class="dp-bar-fill" style="height:65%"></div>
+                                <span>T6</span>
+                            </div>
+                            <div class="dp-month-bar">
+                                <div class="dp-bar-fill" style="height:80%"></div>
+                                <span>T7</span>
+                            </div>
+                            <div class="dp-month-bar active">
+                                <div class="dp-bar-fill" style="height:90%"></div>
+                                <span>T8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content">
+                <span class="detail-tag tag-red">Thu Chi & Tài chính</span>
+                <h3>Nắm rõ dòng tiền,<br>tối ưu lợi nhuận</h3>
+                <p>Theo dõi mọi khoản thu chi của từng tòa nhà, từng phòng. Biểu đồ trực quan giúp bạn nắm bắt tình hình tài chính chỉ trong tích tắc.</p>
+                <ul class="detail-list">
+                    <li>
+                        <span class="check-icon red">✓</span>
+                        Phân loại thu/chi rõ ràng theo danh mục
+                    </li>
+                    <li>
+                        <span class="check-icon red">✓</span>
+                        Công nợ đầu kỳ, theo dõi khách nợ tiền
+                    </li>
+                    <li>
+                        <span class="check-icon red">✓</span>
+                        Biểu đồ doanh thu, lợi nhuận theo tháng
+                    </li>
+                    <li>
+                        <span class="check-icon red">✓</span>
+                        Xuất báo cáo tài chính PDF / Excel
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== MORE FEATURES ===================== -->
+<section class="more-features" id="more">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Và còn nhiều hơn nữa</span>
+            <h2 class="section-title">Tích hợp mọi công cụ<br><span class="gradient-text">chủ trọ cần</span></h2>
+        </div>
+        <div class="more-grid">
+            <div class="more-card">
+                <div class="more-icon">🧾</div>
+                <h4>Hoá đơn tự động</h4>
+                <p>Tạo hoá đơn tiền phòng chi tiết với đầy đủ các khoản: tiền phòng, điện, nước, xe, dịch vụ. Xuất PDF chuyên nghiệp.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">💬</div>
+                <h4>Nhắn tin Zalo tự động</h4>
+                <p>Tự động soạn và gửi tin nhắn nhắc tiền phòng, hoá đơn chi tiết cho từng khách qua Zalo. Tuỳ chỉnh mẫu tin nhắn.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">🚗</div>
+                <h4>Quản lý Xe & Phương tiện</h4>
+                <p>Ghi nhận xe máy, ô tô, xe đạp của khách thuê. Tính phí gửi xe tự động theo tháng.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">📊</div>
+                <h4>Nhập liệu Excel hàng loạt</h4>
+                <p>Tải file mẫu Excel 8 sheet, nhập liệu hàng loạt: tòa nhà, phòng, khách, chi phí, hợp đồng, cọc, điện nước.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">☁️</div>
+                <h4>Sao lưu Google Drive</h4>
+                <p>Đăng nhập Google, sao lưu toàn bộ dữ liệu và ảnh lên Drive. Cơ chế chống trùng lặp tiết kiệm dung lượng.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">💾</div>
+                <h4>Sao lưu Database cục bộ</h4>
+                <p>Xuất file .json chứa 100% dữ liệu để gửi qua Zalo, Email. Khôi phục chỉ 1 chạm.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">🌙</div>
+                <h4>Chế độ Tối (Dark Mode)</h4>
+                <p>Giao diện sáng / tối tuỳ chọn. Bảo vệ mắt khi sử dụng ban đêm, tiết kiệm pin OLED.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">📸</div>
+                <h4>Thư viện Ảnh & Tài liệu</h4>
+                <p>Chụp và lưu trữ ảnh hợp đồng, CCCD, đồng hồ điện nước, biên lai. Sắp xếp theo phòng và khách.</p>
+            </div>
+            <div class="more-card">
+                <div class="more-icon">🏷️</div>
+                <h4>Hoa hồng Môi giới</h4>
+                <p>Quản lý hoa hồng cho Sale giới thiệu khách thuê. Theo dõi ai giới thiệu, bao nhiêu, đã thanh toán chưa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== WORKFLOW ===================== -->
+<section class="workflow" id="workflow">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Quy trình sử dụng</span>
+            <h2 class="section-title">Bắt đầu chỉ trong<br><span class="gradient-text">4 bước đơn giản</span></h2>
+        </div>
+        <div class="workflow-steps">
+            <div class="wf-step">
+                <div class="wf-number">01</div>
+                <div class="wf-content">
+                    <h4>Tạo Tòa nhà & Phòng</h4>
+                    <p>Thêm tòa nhà, đặt tên phòng, cấu hình giá thuê và các loại chi phí (điện, nước, xe, dịch vụ).</p>
+                </div>
+            </div>
+            <div class="wf-connector"></div>
+            <div class="wf-step">
+                <div class="wf-number">02</div>
+                <div class="wf-content">
+                    <h4>Thêm Khách thuê & Hợp đồng</h4>
+                    <p>Điền thông tin khách, chụp CCCD, tạo hợp đồng thuê và ghi nhận tiền cọc.</p>
+                </div>
+            </div>
+            <div class="wf-connector"></div>
+            <div class="wf-step">
+                <div class="wf-number">03</div>
+                <div class="wf-content">
+                    <h4>Ghi Điện Nước hàng tháng</h4>
+                    <p>Cuối tháng, ghi số điện nước mới. App tự tính tiền và tạo hoá đơn tổng cho mỗi phòng.</p>
+                </div>
+            </div>
+            <div class="wf-connector"></div>
+            <div class="wf-step">
+                <div class="wf-number">04</div>
+                <div class="wf-content">
+                    <h4>Thu tiền & Gửi hoá đơn</h4>
+                    <p>Thu tiền phòng, đánh dấu đã thanh toán, gửi hoá đơn PDF qua Zalo cho khách. Xong!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== GOOGLE DRIVE SECTION ===================== -->
+<section class="gdrive-section">
+    <div class="container">
+        <div class="gdrive-card">
+            <div class="gdrive-content">
+                <div class="gdrive-icon-big">☁️</div>
+                <h3>Sao lưu an toàn lên Google Drive</h3>
+                <p>Toàn bộ dữ liệu và hình ảnh được sao lưu lên Google Drive của bạn với cấu trúc thư mục rõ ràng. Cơ chế Incremental Sync đảm bảo ảnh chỉ tải lên 1 lần duy nhất, tiết kiệm 100% dung lượng.</p>
+                <div class="gdrive-folder-tree">
+                    <div class="tree-line">📁 QuanLyTro_Backup/</div>
+                    <div class="tree-line indent-1">📁 LichSu_Database/</div>
+                    <div class="tree-line indent-2">📄 Database_HienTai.json</div>
+                    <div class="tree-line indent-2">📄 Database_2026_08_28.json</div>
+                    <div class="tree-line indent-1">📁 DanhSach_ToaNha/</div>
+                    <div class="tree-line indent-2">📁 Tòa_A/</div>
+                    <div class="tree-line indent-3">📁 Phòng_101/</div>
+                    <div class="tree-line indent-4">📁 Nguyễn_Văn_A/</div>
+                    <div class="tree-line indent-5">🖼️ HopDong.jpg, CCCD.jpg</div>
+                </div>
+            </div>
+            <div class="gdrive-visual">
+                <div class="gdrive-sync-animation">
+                    <div class="sync-phone">📱</div>
+                    <div class="sync-arrows">
+                        <span class="sync-arrow">→</span>
+                        <span class="sync-arrow">→</span>
+                        <span class="sync-arrow">→</span>
+                    </div>
+                    <div class="sync-cloud">☁️</div>
+                </div>
+                <div class="gdrive-features-mini">
+                    <div class="gf-mini"><span>✅</span> Sao lưu 1 chạm</div>
+                    <div class="gf-mini"><span>✅</span> Chống trùng lặp ảnh</div>
+                    <div class="gf-mini"><span>✅</span> Khôi phục mọi lúc</div>
+                    <div class="gf-mini"><span>✅</span> Bảo mật OAuth2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Phản hồi</span>
+            <h2 class="section-title">Được chủ trọ<br><span class="gradient-text">tin dùng</span></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="tc-stars">⭐⭐⭐⭐⭐</div>
+                <p class="tc-text">"Trước đây tôi ghi sổ tay, hay bị nhầm lẫn. Từ khi dùng VivuStay, mọi thứ rõ ràng, tiết kiệm thời gian cực kỳ. Tính năng gửi Zalo tự động là tuyệt vời!"</p>
+                <div class="tc-author">
+                    <div class="tc-avatar">TH</div>
+                    <div>
+                        <span class="tc-name">Anh Trần Hùng</span>
+                        <span class="tc-role">Chủ 3 tòa nhà, TP.HCM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="tc-stars">⭐⭐⭐⭐⭐</div>
+                <p class="tc-text">"Giao diện đẹp, dễ dùng. Tôi thích nhất là chụp ảnh CCCD và hợp đồng lưu ngay trên app, không sợ mất giấy tờ nữa. Sao lưu lên Drive nữa thì yên tâm."</p>
+                <div class="tc-author">
+                    <div class="tc-avatar">LM</div>
+                    <div>
+                        <span class="tc-name">Chị Lê Minh</span>
+                        <span class="tc-role">Chủ trọ 20 phòng, Đà Nẵng</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="tc-stars">⭐⭐⭐⭐⭐</div>
+                <p class="tc-text">"Nhập liệu bằng Excel tiết kiệm rất nhiều thời gian khi tôi chuyển từ phần mềm cũ sang. Hoá đơn PDF gửi cho khách thuê rất chuyên nghiệp!"</p>
+                <div class="tc-author">
+                    <div class="tc-avatar">PD</div>
+                    <div>
+                        <span class="tc-name">Anh Phạm Dũng</span>
+                        <span class="tc-role">Chủ 50 phòng, Hà Nội</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Câu hỏi thường gặp</span>
+            <h2 class="section-title">Giải đáp <span class="gradient-text">thắc mắc</span></h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Ứng dụng có miễn phí không?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Hoàn toàn miễn phí 100%, không có quảng cáo, không giới hạn tính năng. Bạn sử dụng thoải mái mà không tốn bất kỳ chi phí nào.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Dữ liệu có bị mất khi đổi điện thoại không?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Không! Bạn có thể sao lưu toàn bộ dữ liệu lên Google Drive hoặc xuất file .json để chuyển sang điện thoại mới. Hình ảnh hợp đồng, CCCD cũng được sao lưu đầy đủ.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Quản lý được bao nhiêu tòa nhà và phòng?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Không giới hạn! Bạn có thể tạo bao nhiêu tòa nhà và phòng tuỳ ý. Dù bạn có 5 phòng hay 500 phòng, ứng dụng đều hoạt động mượt mà.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Có cần kết nối Internet không?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Không bắt buộc! Tất cả dữ liệu được lưu trực tiếp trên điện thoại. Bạn chỉ cần Internet khi sao lưu lên Google Drive hoặc gửi tin nhắn Zalo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Có hỗ trợ iOS (iPhone) không?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Hiện tại ứng dụng hỗ trợ Android. Phiên bản iOS đang được phát triển và sẽ ra mắt trong thời gian tới.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CTA DOWNLOAD ===================== -->
+<section class="cta-section" id="download">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-bg-pattern"></div>
+            <h2>Bắt đầu quản lý nhà trọ<br>thông minh ngay hôm nay</h2>
+            <p>Tải ứng dụng VivuStay miễn phí — không quảng cáo, không giới hạn.</p>
+            <div class="cta-actions">
+                <a href="#" class="btn btn-white btn-large">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Tải APK (Android)
+                </a>
+            </div>
+            <span class="cta-note">Phiên bản 2.0 • Android 8.0+ • Dung lượng ~25MB</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <span class="logo-icon">🏠</span>
+                    <span class="logo-text">Vivu<span class="logo-accent">Stay</span></span>
+                </a>
+                <p class="footer-desc">Phần mềm quản lý nhà trọ thông minh, miễn phí dành cho chủ trọ Việt Nam.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5>Sản phẩm</h5>
+                    <a href="#features">Tính năng</a>
+                    <a href="#workflow">Quy trình</a>
+                    <a href="#download">Tải ứng dụng</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Hỗ trợ</h5>
+                    <a href="#faq">Câu hỏi thường gặp</a>
+                    <a href="mailto:support@vivustay.com">Liên hệ</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Pháp lý</h5>
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 VivuStay. Thiết kế và phát triển với ❤️ tại Việt Nam.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
