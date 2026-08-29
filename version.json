@@ -1,13 +1,13 @@
 {
-  "latestVersion": "2.0.4",
+  "latestVersion": "2.0.5",
   "latestVersionCode": 1,
   "minSupportedVersion": "1.0.0",
   "releaseDate": "2026-08-29",
-  "downloadUrl": "https://expo.dev/artifacts/eas/mSdTa1j3O-EVcdqpPhyJBsYRusdOgBakPINR6KkM2O0.apk",
+  "downloadUrl": "https://expo.dev/artifacts/eas/BrsbRWe3mFM0kHrqRMw4FhKmPsIOdrOTQ37ienZhqf0.apk",
   "changelog": [
     "Cập nhật hệ thống bảo mật mới",
     "Cập nhật các tính năng mới "
   ],
   "forceUpdate": true,
-  "updateMessage": "Phiên bản v2.0.4 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
+  "updateMessage": "Phiên bản v2.0.5 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
 }
