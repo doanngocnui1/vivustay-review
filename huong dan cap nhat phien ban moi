@@ -1,32 +1,48 @@
-# HƯỚNG DẪN TỰ ĐỘNG HÓA PHÁT HÀNH BẢN CẬP NHẬT (1 CLICK)
+# 📖 HƯỚNG DẪN CẬP NHẬT PHIÊN BẢN MỚI THỦ CÔNG (GITHUB RELEASES)
 
-Tôi đã tạo sẵn cho bạn một script tự động 100%. Bạn không cần phải tự tải file hay đổi tên bằng tay nữa.
+Quy trình phát hành bản cập nhật mới hoàn toàn thủ công. Bạn chỉ cần tải file APK lên mục **Releases** của GitHub, ứng dụng trên điện thoại của khách hàng sẽ **tự động phát hiện và hiển thị bảng thông báo cập nhật**.
 
 ---
 
-### Quy trình tự động (Chỉ cần 2 bước):
+## 🚀 QUY TRÌNH 3 BƯỚC ĐƠN GIẢN:
 
-#### Bước 1: Build APK bằng Expo EAS như bình thường
+### 🔹 BƯỚC 1: Build file APK mới bằng Expo
+Mở terminal trong thư mục `QuanLyTro` và chạy:
 ```bash
 eas build -p android --profile preview
 ```
-(Chờ EAS báo build thành công).
-
-#### Bước 2: Chạy lệnh tự động xuất bản & đồng bộ
-Mở terminal trong thư mục `QuanLyTro` và chạy:
-```bash
-npm run publish-release
-```
+- Khi EAS build hoàn tất, tải file APK về máy tính của bạn (hoặc copy đường link tải APK từ Expo).
 
 ---
 
-### Script này sẽ TỰ ĐỘNG làm toàn bộ các việc sau:
-1. 🔢 **Tự động tăng số phiên bản**: Tự động lấy phiên bản hiện tại và tăng lên 1 số (ví dụ: `v2.0.1` ➔ `v2.0.2` ➔ `v2.0.3`...).
-2. 🔍 Tự động liên hệ Expo EAS lấy link file APK vừa build xong.
-3. 📥 Tự động tải file APK về máy tính.
-4. 📋 Tự động đổi tên thành `viestay-v2.0.2.apk` và `viestay-latest.apk` rồi lưu vào thư mục `HomePage/releases/`.
-5. 📝 Tự động đồng bộ số phiên bản mới vào `version.json`, `app.json`, `package.json` và `updateService.ts`.
-6. 🏷️ Tự động tạo Git Tag tương ứng (`v2.0.2`) và push tag lên GitHub.
-7. 📤 Tự động chạy `git add`, `git commit` và `git push` đẩy thẳng lên GitHub Pages.
+### 🔹 BƯỚC 2: Tải APK lên GitHub Releases
+1. Truy cập vào trang quản lý Releases của kho chứa:  
+   👉 **https://github.com/doanngocnui1/vivustay-review/releases**
 
-Sau khi lệnh chạy xong, phiên bản mới sẽ được phát hành và tất cả người dùng mở ứng dụng Vie Stay sẽ lập tức nhận được thông báo bắt buộc cập nhật lên phiên bản mới nhất!
+2. Nhấn nút **"Draft a new release"** (hoặc tạo Release từ Tag mới):
+   - **Choose a tag**: Nhập tag mới (ví dụ: `v2.0.7` hoặc `v2.0.8`) rồi nhấn **"Create new tag"**.
+   - **Release title**: Đặt tên bản phát hành (ví dụ: `Vie Stay v2.0.7`).
+   - **Description (Mô tả nội dung cập nhật)**:
+     - Nhập các dòng gạch đầu dòng tính năng mới, ví dụ:
+       ```text
+       - Cập nhật giao diện mới
+       - Sửa lỗi đồng bộ Google Drive
+       - Nâng cao hiệu năng ứng dụng
+       ```
+     - 💡 *Mẹo:* Nếu muốn **BẮT BUỘC cập nhật** (người dùng không thể bấm Bỏ qua), hãy thêm chữ `[FORCE]` hoặc `[BẮT BUỘC]` vào trong phần mô tả.
+   - **Attach binaries by dropping them here or selecting them**: Kéo thả file APK bạn vừa build (ví dụ `viestay-v2.0.7.apk`) vào ô này.
+
+3. Nhấn **"Publish release"**.
+
+---
+
+### 🔹 BƯỚC 3: Xong! App tự động thông báo
+- Bất kỳ ai mở ứng dụng Vie Stay trên điện thoại (đang ở phiên bản cũ hơn), ứng dụng sẽ tự động kết nối đến GitHub Releases, phát hiện bản mới và bật Modal thông báo:
+  - Hiển thị số phiên bản mới.
+  - Hiển thị danh sách các tính năng mới trong bản cập nhật.
+  - Nút **"Tải và cài đặt"** sẽ tự động tải file APK trực tiếp từ GitHub Release về máy người dùng.
+
+---
+
+### 🛠️ LƯU Ý KHI ĐỔI PHIÊN BẢN TRONG CODE (NẾU CẦN):
+Trước khi build một phiên bản lớn mới, bạn có thể tăng số phiên bản trong file [app.json](file:///e:/APP%20TU%20BUILD/QuanLyTroAndroid/QuanLyTro/app.json) và [package.json](file:///e:/APP%20TU%20BUILD/QuanLyTroAndroid/QuanLyTro/package.json) (ví dụ từ `2.0.6` thành `2.0.7`).
