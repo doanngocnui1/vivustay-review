@@ -16,47 +16,80 @@
             background-color: #FFFBF7;
             color: #1C1917;
             text-align: center;
-            padding: 20px;
+            padding: 24px;
         }
         .spinner {
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
             border: 4px solid #FED7AA;
             border-top: 4px solid #FF6500;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        h2 { margin: 0 0 10px; color: #FF6500; }
-        p { color: #78716C; font-size: 15px; }
+        h2 { margin: 0 0 10px; color: #FF6500; font-size: 24px; }
+        p { color: #78716C; font-size: 15px; max-width: 320px; line-height: 1.5; }
+        .btn-open {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 28px;
+            background: #FF6500;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 8px 20px rgba(255, 101, 0, 0.35);
+        }
     </style>
 </head>
 <body>
     <div class="spinner"></div>
     <h2>Đăng nhập thành công!</h2>
-    <p>Đang quay trở lại ứng dụng Vie Stay...</p>
+    <p id="msg">Đang tự động chuyển về ứng dụng Vie Stay...</p>
 
     <script>
-        // Forward params to deep link
-        var search = window.location.search;
-        var hash = window.location.hash;
-        var deepLink = "viestay://oauthredirect" + search + hash;
-        
-        // Attempt deep link
-        window.location.href = deepLink;
-        
-        // Fallback button if deep link didn't trigger automatically
-        setTimeout(function() {
-            var btn = document.createElement('a');
-            btn.href = deepLink;
-            btn.innerText = "Bấm vào đây để mở ứng dụng";
-            btn.style.cssText = "display:inline-block; margin-top:20px; padding:12px 24px; background:#FF6500; color:#fff; text-decoration:none; border-radius:12px; font-weight:bold;";
-            document.body.appendChild(btn);
-        }, 1500);
+        (function() {
+            var search = window.location.search;
+            var hash = window.location.hash;
+            
+            // Extract state or fallback to viestay:// scheme
+            var params = new URLSearchParams(search);
+            var stateParam = params.get('state');
+            var targetScheme = "viestay://oauthredirect";
+
+            if (stateParam) {
+                try {
+                    var decodedState = decodeURIComponent(stateParam);
+                    if (decodedState.indexOf('://') !== -1) {
+                        targetScheme = decodedState;
+                    }
+                } catch(e) {}
+            }
+
+            var finalUrl = targetScheme + (targetScheme.indexOf('?') === -1 ? '?' : '&') + 
+                           (search ? search.substring(1) + '&' : '') + 
+                           (hash ? hash.substring(1) : '');
+
+            // Clean trailing ? or &
+            finalUrl = finalUrl.replace(/[?&]+$/, '');
+
+            // Immediate redirect attempt
+            window.location.href = finalUrl;
+
+            // Render clickable button after 800ms
+            setTimeout(function() {
+                var btn = document.createElement('a');
+                btn.className = 'btn-open';
+                btn.href = finalUrl;
+                btn.innerText = '👉 Bấm vào đây để mở ứng dụng Vie Stay';
+                document.body.appendChild(btn);
+            }, 800);
+        })();
     </script>
 </body>
 </html>
