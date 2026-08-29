@@ -1,0 +1,13 @@
+{
+  "latestVersion": "2.0.2",
+  "latestVersionCode": 1,
+  "minSupportedVersion": "1.0.0",
+  "releaseDate": "2026-08-29",
+  "downloadUrl": "https://doanngocnui1.github.io/Vivustay2.0_mobile-app/releases/viestay-v2.0.2.apk",
+  "changelog": [
+    "Cập nhật hệ thống bảo mật mới",
+    "Cập nhật các tính năng mới "
+  ],
+  "forceUpdate": true,
+  "updateMessage": "Phiên bản v2.0.2 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
+}

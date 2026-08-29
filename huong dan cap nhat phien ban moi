@@ -1,0 +1,32 @@
+# HƯỚNG DẪN TỰ ĐỘNG HÓA PHÁT HÀNH BẢN CẬP NHẬT (1 CLICK)
+
+Tôi đã tạo sẵn cho bạn một script tự động 100%. Bạn không cần phải tự tải file hay đổi tên bằng tay nữa.
+
+---
+
+### Quy trình tự động (Chỉ cần 2 bước):
+
+#### Bước 1: Build APK bằng Expo EAS như bình thường
+```bash
+eas build -p android --profile preview
+```
+(Chờ EAS báo build thành công).
+
+#### Bước 2: Chạy lệnh tự động xuất bản & đồng bộ
+Mở terminal trong thư mục `QuanLyTro` và chạy:
+```bash
+npm run publish-release
+```
+
+---
+
+### Script này sẽ TỰ ĐỘNG làm toàn bộ các việc sau:
+1. 🔢 **Tự động tăng số phiên bản**: Tự động lấy phiên bản hiện tại và tăng lên 1 số (ví dụ: `v2.0.1` ➔ `v2.0.2` ➔ `v2.0.3`...).
+2. 🔍 Tự động liên hệ Expo EAS lấy link file APK vừa build xong.
+3. 📥 Tự động tải file APK về máy tính.
+4. 📋 Tự động đổi tên thành `viestay-v2.0.2.apk` và `viestay-latest.apk` rồi lưu vào thư mục `HomePage/releases/`.
+5. 📝 Tự động đồng bộ số phiên bản mới vào `version.json`, `app.json`, `package.json` và `updateService.ts`.
+6. 🏷️ Tự động tạo Git Tag tương ứng (`v2.0.2`) và push tag lên GitHub.
+7. 📤 Tự động chạy `git add`, `git commit` và `git push` đẩy thẳng lên GitHub Pages.
+
+Sau khi lệnh chạy xong, phiên bản mới sẽ được phát hành và tất cả người dùng mở ứng dụng Vie Stay sẽ lập tức nhận được thông báo bắt buộc cập nhật lên phiên bản mới nhất!

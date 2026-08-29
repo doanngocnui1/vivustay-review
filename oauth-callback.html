@@ -54,12 +54,15 @@
 
     <script>
         (function() {
-            var search = window.location.search;
-            var hash = window.location.hash;
+            var search = window.location.search || '';
+            var hash = window.location.hash || '';
             
-            // Extract state or fallback to viestay:// scheme
-            var params = new URLSearchParams(search);
-            var stateParam = params.get('state');
+            // Parse both query parameters and hash fragment
+            var searchParams = new URLSearchParams(search.startsWith('?') ? search.substring(1) : search);
+            var hashParams = new URLSearchParams(hash.startsWith('#') ? hash.substring(1) : hash);
+            
+            // Extract state or fallback to viestay scheme
+            var stateParam = searchParams.get('state') || hashParams.get('state');
             var targetScheme = "viestay://oauthredirect";
 
             if (stateParam) {
@@ -71,24 +74,40 @@
                 } catch(e) {}
             }
 
-            var finalUrl = targetScheme + (targetScheme.indexOf('?') === -1 ? '?' : '&') + 
-                           (search ? search.substring(1) + '&' : '') + 
-                           (hash ? hash.substring(1) : '');
+            // Collect all parameters (search + hash) to forward to app
+            var combinedParams = [];
+            
+            searchParams.forEach(function(val, key) {
+                combinedParams.push(encodeURIComponent(key) + '=' + encodeURIComponent(val));
+            });
+            
+            hashParams.forEach(function(val, key) {
+                combinedParams.push(encodeURIComponent(key) + '=' + encodeURIComponent(val));
+            });
 
-            // Clean trailing ? or &
-            finalUrl = finalUrl.replace(/[?&]+$/, '');
+            var queryString = combinedParams.join('&');
+            var separator = targetScheme.indexOf('?') === -1 ? '?' : '&';
+            if (targetScheme.indexOf('#') !== -1) {
+                separator = '&';
+            }
+            
+            var finalUrl = queryString ? (targetScheme + separator + queryString) : targetScheme;
 
-            // Immediate redirect attempt
-            window.location.href = finalUrl;
+            // Attempt immediate redirect
+            try {
+                window.location.replace(finalUrl);
+            } catch(err) {
+                window.location.href = finalUrl;
+            }
 
-            // Render clickable button after 800ms
+            // Render clickable button after 400ms in case browser blocks auto-redirect
             setTimeout(function() {
                 var btn = document.createElement('a');
                 btn.className = 'btn-open';
                 btn.href = finalUrl;
                 btn.innerText = '👉 Bấm vào đây để mở ứng dụng Vie Stay';
                 document.body.appendChild(btn);
-            }, 800);
+            }, 400);
         })();
     </script>
 </body>
