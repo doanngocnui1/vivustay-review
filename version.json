@@ -1,17 +1,20 @@
 {
-  "latestVersion": "2.0.9",
-  "latestVersionCode": 1,
+  "latestVersion": "3.0.1",
+  "latestVersionCode": 10,
   "minSupportedVersion": "1.0.0",
   "releaseDate": "2026-09-01",
   "downloadUrl": "https://expo.dev/artifacts/eas/BrsbRWe3mFM0kHrqRMw4FhKmPsIOdrOTQ37ienZhqf0.apk",
   "changelog": [
+    "Nâng cấp phiên bản lớn v3.0.1",
     "Tự động tải ngầm và bắt buộc cài đặt bản cập nhật mới",
     "Tự động dọn dẹp xóa file APK sau khi cài đặt xong",
+    "Liên kết doanh thu dự kiến, điện nước, dịch vụ đồng bộ trên Báo Cáo",
+    "Sửa lỗi hiển thị giá thực tế của phòng trống trong Cấu hình giá",
     "Tổng kết giá và cọc theo từng tòa nhà",
     "Cải tiến quản lý nội thất phòng, tòa nhà, toàn hệ thống",
     "Sửa lỗi hiển thị mã VietQR trên hóa đơn",
     "Sắp xếp hợp đồng theo mã phòng và chuẩn hóa ngày hết hạn"
   ],
   "forceUpdate": true,
-  "updateMessage": "Phiên bản v2.0.9 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
+  "updateMessage": "Phiên bản v3.0.1 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
 }
