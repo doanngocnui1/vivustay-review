@@ -1152,11 +1152,148 @@ img {
     color: var(--orange-400);
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 25px;
-    text-align: center;
-    font-size: 13.5px;
+/* ===================== CHANGELOG / TIMELINE ===================== */
+.changelog {
+    padding: 90px 0;
+    background: #FAFAFA;
+}
+
+.timeline {
+    max-width: 860px;
+    margin: 40px auto 0;
+    position: relative;
+    padding-left: 36px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 11px;
+    width: 2px;
+    background: #E2E8F0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -36px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #FFF;
+    border: 3px solid #94A3B8;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-item.latest .timeline-dot {
+    border-color: #FF6500;
+    background: #FF6500;
+    box-shadow: 0 0 0 5px rgba(255, 101, 0, 0.2);
+}
+
+.timeline-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 26px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-item.latest .timeline-card {
+    border: 2px solid #FFD8A8;
+    background: linear-gradient(180deg, #FFFDFB 0%, #FFFFFF 100%);
+    box-shadow: 0 8px 30px rgba(255, 101, 0, 0.08);
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.version-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: #F1F5F9;
+    color: #475569;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.version-tag.badge-latest {
+    background: #FF6500;
+    color: #FFFFFF;
+}
+
+.release-date {
+    font-size: 13px;
+    color: #94A3B8;
+    font-weight: 500;
+}
+
+.timeline-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.changelog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.changelog-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.changelog-list li:last-child {
+    margin-bottom: 0;
+}
+
+.changelog-list li::before {
+    content: '•';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #FF6500;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.changelog-list code {
+    background: #F1F5F9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #E11D48;
 }
 
 /* ===================== RESPONSIVE ===================== */
