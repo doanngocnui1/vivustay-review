@@ -1,13 +1,17 @@
 {
-  "latestVersion": "2.0.6",
+  "latestVersion": "2.0.9",
   "latestVersionCode": 1,
   "minSupportedVersion": "1.0.0",
-  "releaseDate": "2026-08-29",
+  "releaseDate": "2026-09-01",
   "downloadUrl": "https://expo.dev/artifacts/eas/BrsbRWe3mFM0kHrqRMw4FhKmPsIOdrOTQ37ienZhqf0.apk",
   "changelog": [
-    "Cập nhật hệ thống bảo mật mới",
-    "Cập nhật các tính năng mới "
+    "Tự động tải ngầm và bắt buộc cài đặt bản cập nhật mới",
+    "Tự động dọn dẹp xóa file APK sau khi cài đặt xong",
+    "Tổng kết giá và cọc theo từng tòa nhà",
+    "Cải tiến quản lý nội thất phòng, tòa nhà, toàn hệ thống",
+    "Sửa lỗi hiển thị mã VietQR trên hóa đơn",
+    "Sắp xếp hợp đồng theo mã phòng và chuẩn hóa ngày hết hạn"
   ],
   "forceUpdate": true,
-  "updateMessage": "Phiên bản v2.0.6 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
+  "updateMessage": "Phiên bản v2.0.9 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
 }
