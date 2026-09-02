@@ -1,9 +1,9 @@
 {
-  "latestVersion": "3.0.1",
-  "latestVersionCode": 10,
+  "latestVersion": "3.0.2",
+  "latestVersionCode": 1,
   "minSupportedVersion": "1.0.0",
-  "releaseDate": "2026-09-01",
-  "downloadUrl": "https://expo.dev/artifacts/eas/sNSJJWhQmnQpAnFZgDHqjJiFy8ohawkGp_FUEIcfd_8.apk",
+  "releaseDate": "2026-09-02",
+  "downloadUrl": "https://expo.dev/artifacts/eas/M1en2I3c0hWFlChys6InPC6VrTzdYnMakntcpjfD49M.apk",
   "changelog": [
     "Nâng cấp phiên bản lớn v3.0.1",
     "Tự động tải ngầm và bắt buộc cài đặt bản cập nhật mới",
@@ -16,5 +16,5 @@
     "Sắp xếp hợp đồng theo mã phòng và chuẩn hóa ngày hết hạn"
   ],
   "forceUpdate": true,
-  "updateMessage": "Phiên bản v3.0.1 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
+  "updateMessage": "Phiên bản v3.0.2 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
 }
