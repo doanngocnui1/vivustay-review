@@ -1,20 +1,16 @@
 {
-  "latestVersion": "3.0.2",
+  "latestVersion": "3.0.3",
   "latestVersionCode": 1,
   "minSupportedVersion": "1.0.0",
   "releaseDate": "2026-09-02",
-  "downloadUrl": "https://expo.dev/artifacts/eas/M1en2I3c0hWFlChys6InPC6VrTzdYnMakntcpjfD49M.apk",
+  "downloadUrl": "https://expo.dev/artifacts/eas/mb6b-5fo0HS8DdNQw2pGoKSvnA9pVH4Gj1JO2V3PdM4.apk",
   "changelog": [
-    "Nâng cấp phiên bản lớn v3.0.1",
+    "Nâng cấp tính năng Thất thu: Tách biệt khỏi doanh thu & thêm báo cáo chi tiết",
+    "Sửa lỗi thanh lý trả cọc: Tự động hiển thị ngay ở danh sách chờ xử lý hoàn cọc",
+    "Đồng bộ toàn vẹn sao lưu và khôi phục dữ liệu sự cố (incidents)",
     "Tự động tải ngầm và bắt buộc cài đặt bản cập nhật mới",
-    "Tự động dọn dẹp xóa file APK sau khi cài đặt xong",
-    "Liên kết doanh thu dự kiến, điện nước, dịch vụ đồng bộ trên Báo Cáo",
-    "Sửa lỗi hiển thị giá thực tế của phòng trống trong Cấu hình giá",
-    "Tổng kết giá và cọc theo từng tòa nhà",
-    "Cải tiến quản lý nội thất phòng, tòa nhà, toàn hệ thống",
-    "Sửa lỗi hiển thị mã VietQR trên hóa đơn",
-    "Sắp xếp hợp đồng theo mã phòng và chuẩn hóa ngày hết hạn"
+    "Tự động dọn dẹp xóa file APK sau khi cài đặt xong"
   ],
   "forceUpdate": true,
-  "updateMessage": "Phiên bản v3.0.2 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
+  "updateMessage": "Phiên bản v3.0.3 đã sẵn sàng! Vui lòng cập nhật để tiếp tục sử dụng."
 }
